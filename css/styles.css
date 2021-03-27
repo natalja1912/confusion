@@ -1,0 +1,68 @@
+.row-header{
+    margin:0px auto;
+    padding:0px;
+    font-size: 20px;
+}
+
+.row-content {
+    margin:0px auto;
+    padding: 50px 0px 50px 0px;
+    border-bottom: 1px ridge;
+    min-height: 250px;
+}
+
+.footer{
+    background-color: #D1C4E9;
+    margin:0px auto;
+    padding: 20px 0px 20px 0px;
+}
+
+.jumbotron {
+    padding:70px 30px 40px 30px;
+    margin:0px auto;
+    background: #9575CD ;
+    color:floralwhite;
+}
+
+address{
+    font-size:80%;
+    margin:0px;
+    color:#0f0f0f;
+}
+
+body{
+    padding:0;
+    z-index:0;
+}
+
+.navbar-dark {
+     background-color: #512DA8;
+}
+
+.navbar-brand{
+    font-size: 24px;
+}
+
+.navbar-item, .breadcrumb-item{
+    font-size: 20px;
+}
+
+
+.form-control, .col-form-label, .form-label{
+    font-size: 18px;
+}
+
+.form-reserve{
+    border: 1px ridge;
+}
+
+.card-body, .table, .form-check-label, .nav-tabs, .accordion, .accordion-button, .modal, .btn-modal-login{
+    font-size: 20px;
+}
+
+.tab-content {
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+}
