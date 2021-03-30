@@ -82,7 +82,7 @@
         </button>
       </div>
     </nav>
-    <!-- Modal -->
+    <!-- Login Modal -->
     <div
       class="modal fade"
       id="loginModal"
@@ -141,7 +141,10 @@
                 >
                   Cancel
                 </button>
-                <button type="submit" class="btn btn-modal-login btn-primary btn-sm ml-1">
+                <button
+                  type="submit"
+                  class="btn btn-modal-login btn-primary btn-sm ml-1"
+                >
                   Sign in
                 </button>
               </div>
@@ -171,7 +174,7 @@
             </p>
           </div>
           <div
-            class="col-12 col-sm-3 d-flex align-items-center justify-content-start"
+            class="col-12 col-sm-3 d-none d-md-flex align-items-center justify-content-start"
           >
             <img src="./img/logo.png" class="img-fluid" alt="logo" />
           </div>
@@ -183,12 +186,289 @@
               class="btn btn-warning btn-lg"
               role="button"
               data-placement="bottom"
+              data-bs-toggle="modal"
+              data-bs-target="#reserveTableModal"
               >Reserve Table</a
             >
           </div>
         </div>
       </div>
     </header>
+    <!-- Reserve Table Modal -->
+    <div
+      class="modal fade"
+      id="reserveTableModal"
+      tabindex="-1"
+      aria-labelledby="reserveTableModal"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-fullscreen-sm-down modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Reserve a Table</h4>
+            <button
+              type="button"
+              class="btn-close bt-lg"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="row mt-4">
+                <div class="col-12 col-sm-3">
+                  <h5>Number of Guests</h5>
+                </div>
+                <div class="col-12 col-sm d-flex justify-content-start">
+                  <div class="form-check form-check-inline">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="inlineRadioOptions"
+                      id="inlineRadio1"
+                      value="option1"
+                    />
+                    <label class="form-check-label" for="inlineRadio1">1</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="inlineRadioOptions"
+                      id="inlineRadio2"
+                      value="option2"
+                    />
+                    <label class="form-check-label" for="inlineRadio2">2</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="inlineRadioOptions"
+                      id="inlineRadio3"
+                      value="option3"
+                    />
+                    <label class="form-check-label" for="inlineRadio3">3</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="inlineRadioOptions"
+                      id="inlineRadio4"
+                      value="option4"
+                    />
+                    <label class="form-check-label" for="inlineRadio4">4</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="inlineRadioOptions"
+                      id="inlineRadio5"
+                      value="option5"
+                    />
+                    <label class="form-check-label" for="inlineRadio5">5</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="inlineRadioOptions"
+                      id="inlineRadio6"
+                      value="option6"
+                    />
+                    <label class="form-check-label" for="inlineRadio6">6</label>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group row mt-4">
+                <div class="col-12 col-sm-3">
+                  <h5>Section</h5>
+                </div>
+                <div
+                  class="btn-group col-sm-7"
+                  role="group"
+                  aria-label="Basic radio toggle button group"
+                >
+                  <input
+                    type="radio"
+                    class="btn-check"
+                    name="btnradio"
+                    id="btnradio1"
+                    autocomplete="off"
+                    checked
+                  />
+                  <label class="btn btn-outline-danger" for="btnradio1"
+                    >Non-Smoking</label
+                  >
+
+                  <input
+                    type="radio"
+                    class="btn-check"
+                    name="btnradio"
+                    id="btnradio2"
+                    autocomplete="off"
+                  />
+                  <label class="btn btn-outline-primary" for="btnradio2"
+                    >Smoking</label
+                  >
+                </div>
+              </div>
+              <div class="form-group row mt-4">
+                <label for="inputDate" class="col-sm-3 col-form-label"
+                  ><h5>Date and Time</h5></label
+                >
+                <div class="col-sm sm-p-0 mb-2">
+                  <input
+                    type="date"
+                    class="form-control"
+                    id="inputDate"
+                    name="inputDate"
+                    placeholder="Date"
+                  />
+                </div>
+                <div class="col-sm">
+                  <input
+                    type="time"
+                    class="form-control"
+                    id="inputTime"
+                    name="inputTime"
+                    placeholder="Time"
+                  />
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer d-flex justify-content-start offset-md-3">
+            <button
+              type="button"
+              class="btn btn-modal btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Cancel
+            </button>
+            <button type="submit" class="btn btn-modal btn-primary">
+              Reserve
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row row-content">
+        <div
+          id="mycarousel"
+          class="carousel slide carousel-fade"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#carousel-promo"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carousel-promo"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carousel-promo"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            ></button>
+          </div>
+          <div class="carousel-inner">
+            <div
+              class="carousel-item active data-bs-interval=&quot;10000&quot;"
+            >
+              <img
+                class="d-block img-fluid"
+                src="img/uthappizza.png"
+                alt="Uthappizza"
+              />
+              <div class="carousel-caption offset-sm-2">
+                <h2>
+                  Uthappizza<span class="badge bg-danger ms-2">HOT</span
+                  ><span class="badge bg-primary badge-pill ms-2">$4.99</span>
+                </h2>
+                <p class="d-none d-sm-block">
+                  A unique combination of Indian Uthappam (pancake) and Italian
+                  pizza, topped with Cerignola olives, ripe vine cherry
+                  tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.
+                </p>
+              </div>
+            </div>
+            <div class="carousel-item data-bs-interval=&quot;10000&quot;">
+              <img
+                class="d-block img-fluid"
+                src="./img/buffet.png"
+                alt="Bufffet foto"
+              />
+              <div class="carousel-caption offset-sm-2">
+                <div>
+                  <h2>
+                    Weekend Grand Buffet<span
+                      class="badge bg-danger badge-pill ms-2"
+                      >NEW</span
+                    >
+                  </h2>
+                  <p class="d-none d-sm-block">
+                    Featuring mouthwatering combinations with a choice of five
+                    different salads, six enticing appetizers, six main entrees
+                    and five choicest desserts. Free flowing bubbly and soft
+                    drinks. All for just $19.99 per person
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item data-bs-interval=&quot;10000&quot;">
+              <img
+                class="d-block img-remi img-fluid"
+                src="img/remi.png"
+                alt="chef photo"
+              />
+              <div class="carousel-caption offset-sm-2">
+                <h2 class="mt-0">Remi</h2>
+                <h4>Executive Chef</h4>
+                <p class="d-none d-sm-block">
+                  Award winning three-star Michelin chef with wide International
+                  experience having worked closely with whos-who in the culinary
+                  world, he specializes in creating mouthwatering Indo-Italian
+                  fusion experiences.
+                </p>
+              </div>
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carousel-promo"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carousel-promo"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+          <div class="btn-group" role="group" id="carouselButton" aria-label="carouselButton">
+            <button type="button" id="carousel-button" class="btn btn-danger btn-sm"><i class="fa fa-pause"></i></button>          </div>
+        </div>
+      </div>
+    </div>
     <div class="container">
       <div class="row row-content align-items-center">
         <div class="col-12 col-sm-4 order-sm-last col-md-3 mb-2">
@@ -247,7 +527,6 @@
           </div>
         </div>
       </div>
-
       <div class="row row-content align-items-center">
         <div class="col-12 col-sm-4 order-sm-last col-md-3 mb-2">
           <h3>Meet our Culinary Specialists</h3>
@@ -273,113 +552,6 @@
             </div>
           </div>
         </div>
-      </div>
-    </div>
-    <div class="container">
-      <div class="row row-content">
-        <form class="col-12 col-md-8 offset-md-2 form-reserve" id="reserveForm">
-          <div class="row bg-warning bg-gradient text-white text-center p-2">
-            <h3>Reserve a Table</h3>
-          </div>
-          <div class="row mt-4">
-            <div class="col-12 col-sm-3">
-              <h5>Number of Guests</h5>
-            </div>
-            <div
-              class="col-12 col-sm form-check d-flex align-items-center justify-content-start"
-            >
-              <div class="col-1 mx-1">
-                <input
-                  class="form-check-input me-1"
-                  type="radio"
-                  value=""
-                  name="onetable"
-                  id="onetable"
-                />
-                <label class="form-check-label" for="onetable">1</label>
-              </div>
-              <div class="col-1 mx-1">
-                <input
-                  class="form-check-input me-1"
-                  type="radio"
-                  value=""
-                  name="twotables"
-                  id="twotables"
-                />
-                <label class="form-check-label" for="twotables">2</label>
-              </div>
-              <div class="col-1 mx-1">
-                <input
-                  class="form-check-input me-1"
-                  type="radio"
-                  value=""
-                  name="threetables"
-                  id="threetables"
-                />
-                <label class="form-check-label" for="threetables">3</label>
-              </div>
-              <div class="col-1 mx-1">
-                <input
-                  class="form-check-input me-1"
-                  type="radio"
-                  value=""
-                  name="fourtables"
-                  id="fourtables"
-                />
-                <label class="form-check-label" for="fourtables">4</label>
-              </div>
-              <div class="col-1 mx-1">
-                <input
-                  class="form-check-input me-1"
-                  type="radio"
-                  value=""
-                  name="fivetables"
-                  id="fivetables"
-                />
-                <label class="form-check-label" for="fivetables">5</label>
-              </div>
-              <div class="col-1 mx-1">
-                <input
-                  class="form-check-input me-1"
-                  type="radio"
-                  value=""
-                  name="sixtables"
-                  id="sixtables"
-                />
-                <label class="form-check-label" for="sixtables">6</label>
-              </div>
-            </div>
-          </div>
-          <div class="form-group row mt-4">
-            <label for="inputDate" class="col-sm-3 col-form-label"
-              ><h5>Date and Time</h5></label
-            >
-            <div class="col-sm sm-p-0 mb-2">
-              <input
-                type="date"
-                class="form-control"
-                id="inputDate"
-                name="inputDate"
-                placeholder="Date"
-              />
-            </div>
-            <div class="col-sm">
-              <input
-                type="time"
-                class="form-control"
-                id="inputTime"
-                name="inputTime"
-                placeholder="Time"
-              />
-            </div>
-          </div>
-          <button
-            type="submit"
-            class="btn btn-lg btn-primary mt-4 mb-2 offset-md-3"
-          >
-            Reserve
-          </button>
-        </form>
       </div>
     </div>
     <footer class="footer">
@@ -450,5 +622,22 @@
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $("#mycarousel").carousel({interval: 1000});
+        $("#carousel-button").click(function(){
+          if ($("#carousel-button").children("i").hasClass("fa-pause")){
+            $("#mycarousel").carousel("pause");
+            $("#carousel-button").children("i").removeClass("fa-pause");
+            $("#carousel-button").children("i").addClass("fa-play");
+          }
+          else {
+            $("#mycarousel").carousel("cycle");
+            $("#carousel-button").children("i").removeClass("fa-play");
+            $("#carousel-button").children("i").addClass("fa-pause");
+          }
+        });
+      })
+    </script>
   </body>
 </html>
